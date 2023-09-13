@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>puppies</title>
+</head>
+<body>
+  <h1>Add Puppy</h1>
+  <form action="/puppies/<%= puppy._id %>?_method=PUT" method="POST">
+    <input value="<%= puppy.name %>" autocomplete="off" placeholder="Name" name="name" type="text">
+    <input value="<%= puppy.age %>" autocomplete="off" placeholder="Age" name="age" type="number">
+    <input value="<%= puppy.breed %>" autocomplete="off" placeholder="Breed" name="breed" type="text">
+    <button type="submit">Save! 🐶</button>
+  </form>
+</body>
+</html>

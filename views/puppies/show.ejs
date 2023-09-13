@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puppies</title>
+</head>
+<body>
+  <h1><%= puppy.name %>'s Deets</h1>
+  <h3>Age: <%= puppy.age %></h3>
+  <h3>Breed: <%= puppy.breed %></h3>
+  <a href="/puppies/<%= puppy._id %>/edit">Edit</a>
+  <form action="/puppies/<%= puppy._id %>?_method=DELETE" method="POST">
+    <button>Remove puppy 🥲</button>
+  </form>
+</body>
+</html>

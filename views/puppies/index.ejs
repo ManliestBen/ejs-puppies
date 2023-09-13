@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>puppies</title>
+</head>
+<body>
+  <h1>Puppy List</h1>
+  <ul>
+    <% puppies.forEach(puppy => { %>
+      <li>
+        <a href="/puppies/<%= puppy._id %>"><%= puppy.name %></a> is a <%= puppy.age %>-year old <%= puppy.breed %>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/puppies/new">Add Puppy</a>
+</body>
+</html>
